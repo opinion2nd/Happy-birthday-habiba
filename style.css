@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle, #ffe6f0, #ffb3d9);
+  height: 100vh;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  animation: pop 1s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  background: #ff4d94;
+  color: white;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff1a75;
+}
+
+.cake-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.cake {
+  margin: 40px auto;
+  width: 200px;
+}
+
+.layer {
+  height: 60px;
+  border-radius: 10px;
+  background: pink;
+  margin-bottom: 10px;
+}
+
+.cut {
+  animation: cut 1s forwards;
+}
+
+@keyframes pop {
+  from { transform: translate(-50%, -50%) scale(0); }
+  to { transform: translate(-50%, -50%) scale(1); }
+}
+
+@keyframes cut {
+  to { transform: translateX(-40px); opacity: 0.7; }
+}
